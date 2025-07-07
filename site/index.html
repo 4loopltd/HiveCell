@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Self-Evolving Cognitive Mesh: An Interactive Exploration</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F5F5F5;
+            color: #333333;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .nav-link {
+            transition: color 0.3s, border-bottom-color 0.3s;
+            border-bottom: 2px solid transparent;
+        }
+        .nav-link.active, .nav-link:hover {
+            color: #6A8EAE;
+            border-bottom-color: #6A8EAE;
+        }
+        .tab-button {
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        }
+        .tab-button.active {
+            background-color: #6A8EAE;
+            color: #FFFFFF;
+            border-color: #6A8EAE;
+        }
+        .flow-step {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .flow-step:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.1);
+        }
+        .funnel-segment {
+            clip-path: polygon(10% 0, 90% 0, 100% 100%, 0% 100%);
+        }
+        footer p.credits {
+            text-transform:uppercase;
+            font-size:13px;
+            letter-spacing:3px;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-[#333333]">Cognitive Mesh</h1>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#vision" class="nav-link font-semibold pb-1">The Vision</a>
+                <a href="#engine" class="nav-link font-semibold pb-1">Core Engine</a>
+                <a href="#intelligence" class="nav-link font-semibold pb-1">Intelligence Layer</a>
+                <a href="#trust" class="nav-link font-semibold pb-1">Trust & Governance</a>
+                <a href="#validation" class="nav-link font-semibold pb-1">Validation</a>
+                <a href="#resources" class="nav-link font-semibold pb-1">Resources</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="vision" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-[#333333] mb-4">From Monolith to Hive AI</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-12">Rethinking artificial intelligence not as a single, massive brain, but as a buzzing swarm of specialist minds. This is the Self-Evolving Cognitive Mesh.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-gray-100 p-8 rounded-lg border border-gray-200">
+                        <h3 class="text-2xl font-bold mb-4">The Monolithic Model</h3>
+                        <p class="text-gray-600 mb-6">Large, centralised AI models are powerful but rigid, inefficient, and costly. A single flaw requires retraining the entire system, wasting resources on simple tasks.</p>
+                        <ul class="text-left space-y-2">
+                            <li class="flex items-start"><span class="text-red-500 mr-3 mt-1">●</span><span><strong class="text-[#333333]">Rigid & Bloated:</strong> Cannot easily swap out a single faulty capability.</span></li>
+                            <li class="flex items-start"><span class="text-red-500 mr-3 mt-1">●</span><span><strong class="text-[#333333]">Inefficient:</strong> Wastes massive GPU cycles on simple, specialised requests.</span></li>
+                            <li class="flex items-start"><span class="text-red-500 mr-3 mt-1">●</span><span><strong class="text-[#333333]">Slow Evolution:</strong> Tweaking one feature requires retraining billions of parameters.</span></li>
+                        </ul>
+                    </div>
+                    <div class="bg-[#B4D4E4]/20 p-8 rounded-lg border border-[#B4D4E4]">
+                        <h3 class="text-2xl font-bold mb-4">The Hive AI Solution</h3>
+                        <p class="text-gray-600 mb-6">A distributed mesh of specialised micro-models ("Hive Cells") that can be updated, scaled, or retired independently, creating a system that is agile, efficient, and perpetually evolving.</p>
+                         <ul class="text-left space-y-2">
+                            <li class="flex items-start"><span class="text-green-500 mr-3 mt-1">●</span><span><strong class="text-[#333333]">Agile & Modular:</strong> Swap, update, or retire individual cells with zero downtime.</span></li>
+                            <li class="flex items-start"><span class="text-green-500 mr-3 mt-1">●</span><span><strong class="text-[#333333]">Resource Efficient:</strong> Matches task complexity to the right-sized model, saving costs.</span></li>
+                            <li class="flex items-start"><span class="text-green-500 mr-3 mt-1">●</span><span><strong class="text-[#333333]">Continuous Evolution:</strong> Community-driven improvements create a living, learning entity.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="engine" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-4">The Core Engine: Distributed Systems Foundations</h2>
+                <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">The Mesh's stability and scale are built on proven computer science principles. This section provides an interactive dashboard to explore the foundational pillars that ensure the system is reliable, consistent, and resilient. Click on a principle to see how it's applied.</p>
+                
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex flex-wrap justify-center gap-2 mb-8 border-b pb-4">
+                        <button class="tab-button border border-gray-300 px-4 py-2 rounded-full font-semibold active" data-tab="consistency">Consistency Models</button>
+                        <button class="tab-button border border-gray-300 px-4 py-2 rounded-full font-semibold" data-tab="fault">Fault Tolerance</button>
+                        <button class="tab-button border border-gray-300 px-4 py-2 rounded-full font-semibold" data-tab="consensus">Consensus Mechanisms</button>
+                    </div>
+
+                    <div id="consistency-content" class="tab-content">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-3 text-[#6A8EAE]">Consistency Models</h3>
+                                <p class="text-gray-600">The Mesh doesn't use a one-size-fits-all approach. It strategically applies different models to balance performance and accuracy. <strong class="text-[#333333]">Strong consistency</strong> guarantees perfect data accuracy for critical operations like promotions, while <strong class="text-[#333333]">Eventual consistency</strong> allows for high availability and speed for dynamic data like reputation scores.</p>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="consistencyChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="fault-content" class="tab-content hidden">
+                         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-3 text-[#6A8EAE]">Fault Tolerance & Replication</h3>
+                                <p class="text-gray-600 mb-4">The system is designed to withstand failure. Through <strong class="text-[#333333]">redundancy</strong> (many instances of components), <strong class="text-[#333333]">replication</strong> (active and passive copies), and <strong class="text-[#333333]">intelligent self-healing</strong> (AI agents detecting and fixing issues), a partial failure never leads to a total system shutdown.</p>
+                            </div>
+                            <div class="flex items-center justify-center h-full">
+                                <div class="grid grid-cols-2 gap-4 text-center">
+                                    <div class="p-4 bg-gray-100 rounded-lg"><strong class="block text-lg text-[#6A8EAE]">Redundancy</strong><span>Numerous Instances</span></div>
+                                    <div class="p-4 bg-gray-100 rounded-lg"><strong class="block text-lg text-[#6A8EAE]">Replication</strong><span>Active/Passive Copies</span></div>
+                                    <div class="p-4 bg-gray-100 rounded-lg"><strong class="block text-lg text-[#6A8EAE]">Self-Healing</strong><span>AI-driven Recovery</span></div>
+                                    <div class="p-4 bg-gray-100 rounded-lg"><strong class="block text-lg text-[#6A8EAE]">No SPOF</strong><span>No Single Point of Failure</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="consensus-content" class="tab-content hidden">
+                         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-3 text-[#6A8EAE]">Distributed Consensus</h3>
+                                <p class="text-gray-600">For critical decisions like promoting a new Hive Cell, all validators must agree. The Mesh uses <strong class="text-[#333333]">Byzantine Fault Tolerant (BFT)</strong> consensus. This ensures that even if some actors are malicious, the system remains secure and makes decisions that benefit the entire network, preventing faulty or harmful AI from being approved.</p>
+                            </div>
+                            <div class="flex flex-col items-center justify-center space-y-2 p-4">
+                               <div class="flow-step p-4 rounded-lg bg-white border-2 border-[#6A8EAE] w-full text-center"><strong>1. Proposal</strong><p class="text-sm text-gray-500">New Hive Cell variant is proposed.</p></div>
+                               <div class="text-2xl text-[#6A8EAE]">↓</div>
+                               <div class="flow-step p-4 rounded-lg bg-white border-2 border-[#6A8EAE] w-full text-center"><strong>2. Validation</strong><p class="text-sm text-gray-500">Quorum of validators vote.</p></div>
+                               <div class="text-2xl text-[#6A8EAE]">↓</div>
+                               <div class="flow-step p-4 rounded-lg bg-white border-2 border-[#6A8EAE] w-full text-center"><strong>3. Agreement (>2/3)</strong><p class="text-sm text-gray-500">BFT ensures security against bad actors.</p></div>
+                               <div class="text-2xl text-[#6A8EAE]">↓</div>
+                               <div class="flow-step p-4 rounded-lg bg-green-100 border-2 border-green-500 w-full text-center"><strong>4. Promotion</strong><p class="text-sm text-gray-500">Approved cell is rolled out.</p></div>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="intelligence" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                 <h2 class="text-3xl font-bold text-center mb-4">The Intelligence Layer: Multi-Agent Coordination</h2>
+                <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">Intelligence emerges from collaboration. The Mesh is a Multi-Agent System (MAS) that selectively blends formal architectures to enable its "specialist minds" to coordinate, negotiate tasks, and self-organise into a cohesive, intelligent whole.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                     <div class="chart-container">
+                        <canvas id="agentCoordinationChart"></canvas>
+                    </div>
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="text-xl font-bold text-[#6A8EAE]">Belief-Desire-Intention (BDI)</h4>
+                            <p class="text-gray-600">Models individual agents to reason like humans, enabling autonomous, goal-oriented behavior for each Hive Cell.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-[#6A8EAE]">Blackboard Architecture</h4>
+                            <p class="text-gray-600">Uses a shared knowledge space (CognitionHub) to facilitate adaptive collaboration and allow agents to build upon each other's work.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-[#6A8EAE]">Contract Net Protocol (CNP)</h4>
+                            <p class="text-gray-600">Allows for dynamic, negotiation-based task allocation, where agents "bid" for jobs, ensuring optimal load balancing and resource use.</p>
+                        </div>
+                         <div>
+                            <h4 class="text-xl font-bold text-[#6A8EAE]">Swarm Intelligence</h4>
+                            <p class="text-gray-600">Fosters system-wide adaptability and robustness as complex global behaviors emerge from simple, local interactions between cells.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="trust" class="py-20">
+            <div class="container mx-auto px-6">
+                 <h2 class="text-3xl font-bold text-center mb-4">The Shield: Trust, Security & Governance</h2>
+                <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">For a community-powered AI to succeed, trust is not an option—it is the foundation. The Mesh integrates a multi-layered security, governance, and ethics model to protect the system and its users from creation to retirement.</p>
+                 <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg">
+                    <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+                        <div class="lg:col-span-3">
+                             <h3 class="text-2xl font-bold mb-4 text-[#6A8EAE]">The Evolution & Promotion Pipeline</h3>
+                             <p class="text-gray-600 mb-6">Every new Hive Cell variant must pass a rigorous, automated pipeline that blends AI-driven challenges with human oversight before it can be promoted. This ensures only the best, safest, and most ethical improvements are integrated.</p>
+                             <div class="space-y-4">
+                                <div class="flow-step flex items-center p-3 rounded-lg bg-gray-50 border border-gray-200">
+                                    <div class="bg-[#B4D4E4] p-3 rounded-full mr-4 text-2xl">1</div>
+                                    <div><strong class="text-[#333333]">Contribution & Vetting:</strong> A new Cell is submitted and passes automated license, bias, and security scans.</div>
+                                </div>
+                                <div class="flow-step flex items-center p-3 rounded-lg bg-gray-50 border border-gray-200">
+                                    <div class="bg-[#B4D4E4] p-3 rounded-full mr-4 text-2xl">2</div>
+                                    <div><strong class="text-[#333333]">Adversarial Gauntlet:</strong> Specialised AI "red teams" challenge the variant to find flaws and vulnerabilities.</div>
+                                </div>
+                                <div class="flow-step flex items-center p-3 rounded-lg bg-gray-50 border border-gray-200">
+                                    <div class="bg-[#B4D4E4] p-3 rounded-full mr-4 text-2xl">3</div>
+                                    <div><strong class="text-[#333333]">Consensus Vote:</strong> A quorum of human and AI validators must vote for promotion based on performance and safety data.</div>
+                                </div>
+                                <div class="flow-step flex items-center p-3 rounded-lg bg-gray-50 border border-gray-200">
+                                    <div class="bg-[#B4D4E4] p-3 rounded-full mr-4 text-2xl">4</div>
+                                    <div><strong class="text-[#333333]">Zero-Downtime Rollout:</strong> The approved version is seamlessly deployed across the Mesh, with its history recorded on an immutable ledger.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-2">
+                             <h3 class="text-2xl font-bold mb-4 text-[#6A8EAE]">Dynamic Reputation System</h3>
+                              <p class="text-gray-600 mb-6">Trust is earned, not given. A cell's reputation is a dynamic score based on verified performance and community feedback. This score directly influences routing decisions and governance rights.</p>
+                            <div class="chart-container h-64">
+                                <canvas id="reputationChart"></canvas>
+                            </div>
+                             <div class="mt-8">
+                                <h4 class="font-semibold text-lg mb-2 text-[#333333]">Immutable Auditable Lineage</h4>
+                                <p class="text-gray-600 text-sm">Every significant event in a cell's lifecycle is recorded on a distributed ledger, providing full transparency and accountability for the AI's entire evolutionary history.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="validation" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-4">The Validation Blueprint</h2>
+                <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">Vision requires proof. The Mesh's claims are validated through a rigorous, multi-stage strategy that de-risks development and builds the empirical scaffolding needed to inspire confidence. This creates a continuous feedback loop that guides the system's evolution.</p>
+                <div class="flex flex-col items-center space-y-0.5">
+                    <div class="funnel-segment w-full max-w-2xl bg-[#6A8EAE] text-white p-6 text-center shadow-lg">
+                        <h4 class="font-bold text-xl">1. High-Fidelity Simulation</h4>
+                        <p>Modeling complex interactions at massive scale to test routing, resource allocation, and evolutionary dynamics in a controlled environment.</p>
+                    </div>
+                    <div class="funnel-segment w-full max-w-xl bg-[#8aacc8] text-white p-5 text-center shadow-md">
+                        <h4 class="font-bold text-lg">2. Proof-of-Concept Prototyping</h4>
+                        <p>Using frameworks like Kubernetes and LangChain to build and test core components, gaining practical insights into real-world challenges.</p>
+                    </div>
+                     <div class="funnel-segment w-full max-w-lg bg-[#B4D4E4] p-4 text-center text-[#333333] shadow-sm">
+                        <h4 class="font-bold">3. Targeted A/B Testing</h4>
+                        <p class="text-sm">Conducting controlled experiments to compare algorithms for routing, evolution, and reputation to identify optimal strategies.</p>
+                    </div>
+                     <div class="funnel-segment w-full max-w-md bg-gray-200 p-3 text-center text-gray-700 shadow-inner">
+                        <h4 class="font-bold">4. Real-World Deployment</h4>
+                        <p class="text-sm">Gradually rolling out validated components into the live ecosystem.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resources" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-4">Resources & Further Reading</h2>
+                <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">Dive deeper into the technical foundations and vision behind the Cognitive Mesh with our whitepaper, technical documentation, and an audio overview.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+
+                    <!-- PDF Links -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg flow-step">
+                        <h3 class="text-xl font-bold text-[#6A8EAE] mb-3">Project Whitepaper</h3>
+                        <p class="text-gray-600 mb-4">A comprehensive overview of the project's vision, core principles, and long-term roadmap.</p>
+                        <!-- Make sure 'The Hive AI Whitepaper.pdf' matches your actual filename -->
+                        <a href="../docs/Self-Evolving%20Cognitive%20Mesh%20V0.3.pdf" target="_blank" class="inline-block bg-[#6A8EAE] text-white font-bold py-2 px-4 rounded hover:bg-[#597a9a] transition-colors">Read Whitepaper (PDF)</a>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg flow-step">
+                        <h3 class="text-xl font-bold text-[#6A8EAE] mb-3">Technical Architecture</h3>
+                        <p class="text-gray-600 mb-4">A deep dive into the distributed systems and AI coordination protocols that power the mesh.</p>
+                        <!-- Make sure 'Technical Architecture Deep Dive.pdf' matches your actual filename -->
+                        <a href="../docs/Enhancing%20the%20Self-Evolving%20Cognitive%20Mesh%20V0.1.pdf" target="_blank" class="inline-block bg-[#6A8EAE] text-white font-bold py-2 px-4 rounded hover:bg-[#597a9a] transition-colors">View Architecture (PDF)</a>
+                    </div>
+
+                    <!-- Audio Player -->
+                    <div class="md:col-span-2 bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-bold text-[#6A8EAE] mb-4">Audio Overview: Decoding the Mesh</h3>
+                        <p class="text-gray-600 mb-4">Listen to a concise explanation of the Self-Evolving Cognitive Mesh, its purpose, and its potential impact.</p>
+                        <audio controls class="w-full">
+                            <source src="../audio/Decoding%20the%20Self-Evolving%20Cognitive%20Mesh.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    </main>
+
+    <div id="consent-banner" class="hidden fixed bottom-0 left-0 right-0 bg-gray-800/95 backdrop-blur-sm text-white p-4 z-50">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-sm text-center md:text-left">This website uses cookies to enhance the user experience. By clicking "Accept", you consent to the use of cookies for analytics purposes.</p>
+            <div class="flex-shrink-0">
+                <button id="consent-accept" class="bg-[#6A8EAE] hover:bg-[#597a9a] text-white font-bold py-2 px-4 rounded transition-colors">Accept</button>
+                <button id="consent-deny" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded transition-colors">Deny</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-[#333333] text-white mt-20">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p class="font-bold text-lg">Towards a Collaborative, Ethical, and Infinitely Scalable AI Future.</p>
+            <p class="text-sm text-gray-300 mt-2">The Cognitive Mesh: Intelligence as a Public Utility, Owned and Shaped by All.</p>
+            <p class="credits">Copyright &copy; 4Loop Ltd 2025</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const THEME_COLORS = {
+                primary: '#6A8EAE',
+                secondary: '#B4D4E4',
+                accent: '#E8A87C',
+                text: '#333333',
+                background: '#F5F5F5'
+            };
+
+            const wrapLabel = (str, maxWidth = 16) => {
+                if (typeof str !== 'string' || str.length <= maxWidth) return str;
+                const words = str.split(' ');
+                const lines = [];
+                let currentLine = '';
+                words.forEach(word => {
+                    if ((currentLine + ' ' + word).trim().length > maxWidth && currentLine.length > 0) {
+                        lines.push(currentLine);
+                        currentLine = word;
+                    } else {
+                        currentLine = (currentLine + ' ' + word).trim();
+                    }
+                });
+                if (currentLine) lines.push(currentLine);
+                return lines;
+            };
+
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                return Array.isArray(label) ? label.join(' ') : label;
+            };
+
+            const chartDefaultOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        labels: { color: THEME_COLORS.text, font: { family: 'Inter' } }
+                    },
+                    tooltip: {
+                        callbacks: { title: tooltipTitleCallback },
+                        backgroundColor: '#FFFFFF',
+                        titleColor: THEME_COLORS.text,
+                        bodyColor: THEME_COLORS.text,
+                        borderColor: '#DDDDDD',
+                        borderWidth: 1,
+                        bodyFont: { family: 'Inter' },
+                        titleFont: { family: 'Inter', weight: 'bold' }
+                    }
+                },
+                scales: {
+                    y: {
+                        ticks: { color: THEME_COLORS.text, font: { family: 'Inter' } },
+                        grid: { color: 'rgba(0,0,0,0.05)' }
+                    },
+                    x: {
+                        ticks: { color: THEME_COLORS.text, font: { family: 'Inter' } },
+                        grid: { display: false }
+                    }
+                }
+            };
+
+            function createConsistencyChart() {
+                const ctx = document.getElementById('consistencyChart')?.getContext('2d');
+                if (!ctx) return;
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Strong', 'Causal', 'Eventual'],
+                        datasets: [{
+                            label: 'Latency',
+                            data: [9, 6, 2],
+                            backgroundColor: THEME_COLORS.secondary,
+                        }, {
+                            label: 'Availability',
+                            data: [4, 7, 10],
+                            backgroundColor: THEME_COLORS.primary,
+                        }]
+                    },
+                    options: {
+                        ...chartDefaultOptions,
+                        plugins: {
+                            ...chartDefaultOptions.plugins,
+                             title: { display: true, text: 'Consistency Model Trade-offs', color: THEME_COLORS.text, font: { size: 14, weight: 'bold' }}
+                        },
+                        scales: {
+                            x: { stacked: true, ...chartDefaultOptions.scales.x },
+                            y: { stacked: true, ...chartDefaultOptions.scales.y, title: { display: true, text: 'Relative Score' } }
+                        },
+                    }
+                });
+            }
+
+            function createAgentCoordinationChart() {
+                const ctx = document.getElementById('agentCoordinationChart')?.getContext('2d');
+                if (!ctx) return;
+                new Chart(ctx, {
+                    type: 'radar',
+                    data: {
+                        labels: ['Autonomy', 'Scalability', 'Shared Context', 'Dynamic Tasks', 'Low Overhead'],
+                        datasets: [{
+                            label: 'BDI Model',
+                            data: [9, 4, 3, 7, 5],
+                            backgroundColor: 'rgba(232, 168, 124, 0.2)',
+                            borderColor: THEME_COLORS.accent,
+                            pointBackgroundColor: THEME_COLORS.accent,
+                        }, {
+                            label: 'Blackboard',
+                            data: [5, 7, 9, 8, 6],
+                            backgroundColor: 'rgba(106, 142, 174, 0.2)',
+                            borderColor: THEME_COLORS.primary,
+                            pointBackgroundColor: THEME_COLORS.primary,
+                        }]
+                    },
+                    options: {
+                        ...chartDefaultOptions,
+                        plugins: { ...chartDefaultOptions.plugins, title: { display: true, text: 'Coordination Paradigm Strengths', color: THEME_COLORS.text, font: { size: 16, weight: 'bold' }}},
+                        scales: {
+                            r: {
+                                pointLabels: { font: { size: 12 } },
+                                grid: { color: 'rgba(0,0,0,0.05)' },
+                                angleLines: { color: 'rgba(0,0,0,0.05)' }
+                            }
+                        }
+                    }
+                });
+            }
+            
+            function createReputationChart() {
+                const ctx = document.getElementById('reputationChart')?.getContext('2d');
+                if (!ctx) return;
+                new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: wrapLabel(['Verified Usage', 'Stake-Weighted Feedback', 'Source Diversity', 'Recency Decay']),
+                        datasets: [{
+                            data: [45, 30, 15, 10],
+                            backgroundColor: [THEME_COLORS.primary, THEME_COLORS.secondary, THEME_COLORS.accent, '#CCCCCC'],
+                            borderColor: '#FFFFFF',
+                            borderWidth: 4,
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { position: 'bottom', labels: { color: THEME_COLORS.text, font: { family: 'Inter' }}},
+                            title: { display: true, text: 'Reputation Score Factors', color: THEME_COLORS.text, font: { size: 16, weight: 'bold' }},
+                            tooltip: chartDefaultOptions.plugins.tooltip
+                        }
+                    }
+                });
+            }
+
+            const tabs = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(item => item.classList.remove('active'));
+                    tab.classList.add('active');
+                    const target = tab.getAttribute('data-tab');
+                    tabContents.forEach(content => {
+                        content.classList.add('hidden');
+                        if (content.id === `${target}-content`) {
+                            content.classList.remove('hidden');
+                        }
+                    });
+                });
+            });
+
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('main section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => {
+                            link.classList.toggle('active', link.getAttribute('href').substring(1) === entry.target.id);
+                        });
+                    }
+                });
+            }, { rootMargin: "-50% 0px -50% 0px" });
+            sections.forEach(section => observer.observe(section));
+            
+            createConsistencyChart();
+            createAgentCoordinationChart();
+            createReputationChart();
+        });
+    </script>
+</body>
+</html>
