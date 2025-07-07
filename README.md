@@ -1,0 +1,2 @@
+# HiveCell
+Cognitive Mesh Architecture
