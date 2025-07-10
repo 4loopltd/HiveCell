@@ -1,0 +1,7 @@
+User-agent: *
+
+Disallow: /js/
+Disallow: /cgi-bin/
+Disallow: /*.php$
+
+Sitemap: https://www.hivecell.4loop.co.uk/sitemap.xml
