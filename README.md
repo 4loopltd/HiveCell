@@ -40,14 +40,14 @@ Monolithic LLMs are powerful but inflexible. HiveCell explores how we might:
 
 ## 📄 Current Contents
 
-| File                                                                                                                             | Description                                    |
-|----------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------|
-| [`docs/Self-Evolving Cognitive Mesh V0.3.pdf`](docs/Self-Evolving%20Cognitive%20Mesh%20V0.3.pdf)                                 | Draft Concept essay outlining the architecture |
-| [`docs/Enhancing the Self-Evolving Cognitive Mesh V0.1.pdf`](docs/Enhancing%20the%20Self-Evolving%20Cognitive%20Mesh%20V0.1.pdf) | 100% AI generated report                       |
-| [`audio/Decoding the Self-Evolving Cognitive Mesh.mp3`](audio/Decoding%20the%20Self-Evolving%20Cognitive%20Mesh.mp3)             | AI generated audio discussion                  |
-| `specs/hivecell-manifest.schema.json`                                                                                            | Draft schema for Hive Cell metadata            |
-| `notes/`                                                                                                                         | Design sketches, diagrams, and notes (WIP)     |
-| [`Cognitive-Mesh.html`](Cognitive-Mesh.html)                                                                                     | Site                                           |
+| File                                                                                                                              | Description                                |
+|-----------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|
+| [`docs/Self-Evolving Cognitive Mesh V0.3.pdf`](docs/Self-Evolving%20Cognitive%20Mesh%20V0.3.pdf)                                  | Concept essay outlining the architecture   |
+| [`docs/Enhancing the Self-Evolving Cognitive Mesh V0.1.pdf`](docs/Enhancing%20the%20Self-Evolving%20Cognitive%20Mesh%20V0.1.pdf)  | AI generated report                        |
+| [`audio/Decoding the Self-Evolving Cognitive Mesh.mp3`](audio/Decoding%20the%20Self-Evolving%20Cognitive%20Mesh.mp3)              | AI generated audio discussion              |
+| `specs/hivecell-manifest.schema.json`                                                                                             | Draft schema for Hive Cell metadata        |
+| `notes/`                                                                                                                          | Design sketches, diagrams, and notes (WIP) |
+| `Cognitive-Mesh.html`                                                                                                             | Site                                       |
 ---
 
 ## 🚧 Status
