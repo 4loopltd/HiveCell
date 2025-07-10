@@ -52,7 +52,7 @@ Monolithic LLMs are powerful but inflexible. HiveCell explores how we might:
 
 ## 🚧 Status
 
-This is an exploratory learning project, primarily used to explore AI-assisted brainstorming. No working code yet — just ideas, drafts, and potential starting points.
+This is an exploratory learning project, primarily used to explore AI-assisted brainstorming. No working code yet just ideas, drafts, and potential starting points.
 
 The initial idea was fleshed out in a number of sessions using multiple LLMs. For this particular exercise, the actual subject matter was of less importance than the brainstorming process itself, though it clearly resonated with the LLMs! The resulting `Self-Evolving Cognitive Mesh V0.3.pdf` is roughly a 50/50 split of human and AI content, with the accompanying research report, audio, and website being 100% AI-generated.
 
