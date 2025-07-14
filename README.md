@@ -2,7 +2,7 @@
 
 > “What if intelligence wasn’t a single massive brain, but a buzzing swarm of specialist minds?”
 
-HiveCell is a conceptual exploration into distributed, modular AI systems. It proposes an alternative to monolithic LLMs by imagining a mesh of small, specialised models or "Hive Cells" coordinated by a decentralised control layer called the Cognitive Operating System (COS).
+HiveCell is a conceptual exploration into distributed, modular AI systems. It proposes an alternative to monolithic LLMs by imagining a mesh of small, specialised models or "Hive Cells" coordinated by a decentralised control layer called the Cognitive Operating System (COS). See: Richard Anaya - [Cognitive Operating Systems](https://www.richardanaya.com/p/cognitive-operating-systems)
 
 This repo is a work-in-progress. It’s not a product or framework, just a space to play with AI, think out loud, sketch ideas, and maybe prototype a few components over time.
 
